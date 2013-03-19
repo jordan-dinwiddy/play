@@ -82,7 +82,6 @@ public class ArrayBasedPriorityQueue<T> implements Queue<T> {
 		return result.item;
 	}
 
-
 	/**
 	 * Moves the element at the specified index up the heap until the heap condition holds true.
 	 * 
@@ -147,6 +146,4 @@ public class ArrayBasedPriorityQueue<T> implements Queue<T> {
 		data.set(ixA, data.get(ixB));
 		data.set(ixB, tmp);
 	}
-
-
 }
