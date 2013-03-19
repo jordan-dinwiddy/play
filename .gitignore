@@ -1,0 +1,18 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+#Log files
+*.log.*
+*.log
+
+.classpath
+.project
+.settings/
+
+#Compile target
+target/
+
