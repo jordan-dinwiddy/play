@@ -3,25 +3,11 @@ package cx.ath.nb12.priorityqueue;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ArrayBasedPriorityQueue<T> implements Queue<T> {
+import cx.ath.nb12.MyQueue;
+
+public class ArrayBasedPriorityQueue<T> implements MyQueue<T> {
 
 	private List<QueueEntry<T>> data; 
-
-	public enum Priority {
-		LOW(0),
-		MEDIUM(1),
-		HIGH(2);
-
-		private int nValue;
-
-		private Priority(int nValue) {
-			this.nValue = nValue;
-		}
-
-		public int getNValue() {
-			return nValue;
-		}
-	}
 
 	private static class QueueEntry<T> {
 
