@@ -27,20 +27,7 @@ public class BasicThreadPoolDemo {
 		
 		BasicThreadPool pool = new BasicThreadPool(NUM_EXECUTORS); 
 		
-		Runnable job = new Runnable() {
-			
-			@Override
-			public void run() {
-				
-				// Expensive work goes on here...
-				
-				try {
-					Thread.sleep(ranGen.nextInt(1000));
-				} catch(InterruptedException e) {
-					
-				}
-			}
-		};
+		Runnable job = getJob();
 		
 		Logger.log("Submitting " + numJobs + " jobs to thread pool...");
 		for(int i = 0; i < numJobs; i++) {
@@ -56,5 +43,25 @@ public class BasicThreadPoolDemo {
 		} catch(InterruptedException e) {
 			
 		}
+	}
+
+	private Runnable getJob() {
+		
+		Runnable job = new Runnable() {
+			
+			@Override
+			public void run() {
+				
+				// Expensive work goes on here...
+				
+				try {
+					Thread.sleep(ranGen.nextInt(1000));
+				} catch(InterruptedException e) {
+					
+				}
+			}
+		};
+		
+		return job;
 	}
 }
