@@ -14,6 +14,14 @@ public class BlockingQueue<T> implements MyQueue<T> {
 		this.items = new ArrayList<T>(capacity);
 	}
 	
+	/**
+	 * Creates a blocking queue with no size limit.
+	 */
+	public BlockingQueue() {
+		this.maxCapacity = -1;
+		this.items = new ArrayList<T>();
+	}
+	
 	@Override
 	public synchronized void enqueue(T item) {
 
