@@ -35,6 +35,19 @@ public class BasicThreadPool {
 		}
 	}
 	
+	/**
+	 * Prompts each thread executor to finish it's current task and then exit. If the executors 
+	 * current task is long running, then it will take some time for the pool to 'shutdown'.
+	 * 
+	 * This call does not block.
+	 */
+	public void softStop() {
+		
+		for(ThreadPoolMember executor : executors) {
+			executor.softStop();
+		}
+	}
+	
 	public void submit(Runnable job) {
 		
 		blockingQueue.enqueue(job);
@@ -48,6 +61,7 @@ public class BasicThreadPool {
 		private String memberName; 
 		private Thread thisThread;
 		private int jobsCompleted = 0;
+		private boolean running = false;
 		
 		private ThreadPoolMember(String memberName) {
 			
@@ -56,20 +70,28 @@ public class BasicThreadPool {
 		
 		private void start() {
 			
+			running = true;
 			thisThread = new Thread(this, memberName);
 			thisThread.start();
+		}
+		
+		private void softStop() {
+			
+			running = false;
 		}
 		
 		@Override
 		public void run() {
 			
-			while(true) {
+			while(running) {
 				Runnable job = blockingQueue.dequeue();
 				
 				Logger.log(Thread.currentThread().getName() + ": Running my " + (jobsCompleted+1) + "'th job...");
 				job.run();
 				jobsCompleted++;
 			}
+			
+			Logger.log(Thread.currentThread().getName() + ": Exiting");
 		}
 	}
 }
