@@ -1,6 +1,6 @@
 package cx.ath.nb12.threadpool;
 
-import cx.ath.nb12.BlockingQueue;
+import cx.ath.nb12.blockingqueue.BlockingQueue;
 import cx.ath.nb12.Logger;
 
 /**

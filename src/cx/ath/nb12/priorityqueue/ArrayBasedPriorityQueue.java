@@ -3,9 +3,9 @@ package cx.ath.nb12.priorityqueue;
 import java.util.ArrayList;
 import java.util.List;
 
-import cx.ath.nb12.MyQueue;
+import cx.ath.nb12.blockingqueue.CustomQueue;
 
-public class ArrayBasedPriorityQueue<T> implements MyQueue<T> {
+public class ArrayBasedPriorityQueue<T> implements CustomQueue<T> {
 
 	private List<QueueEntry<T>> data; 
 

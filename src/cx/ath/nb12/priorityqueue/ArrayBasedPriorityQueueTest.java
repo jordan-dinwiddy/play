@@ -5,7 +5,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import cx.ath.nb12.priorityqueue.ArrayBasedPriorityQueue.Priority;
+import cx.ath.nb12.priorityqueue.Priority;
 
 public class ArrayBasedPriorityQueueTest {
 

@@ -1,17 +1,17 @@
-package cx.ath.nb12;
+package cx.ath.nb12.stack;
 
-public class Stack {
+public class StackBasicFixedArrayImpl implements Stack {
 	
 	private String[] buf;
 	private int stackPtr;
 	private final int STACK_DEFAULT_SIZE = 64;
 	
-	public Stack( int stackSize )
+	public StackBasicFixedArrayImpl( int stackSize )
 	{
 		this.init( stackSize );
 	}
 	
-	public Stack()
+	public StackBasicFixedArrayImpl()
 	{
 		this.init( STACK_DEFAULT_SIZE );
 	}
@@ -22,6 +22,10 @@ public class Stack {
 		stackPtr = stackSize;
 	}
 	
+	/* (non-Javadoc)
+	 * @see cx.ath.nb12.stack.Stack#push(java.lang.String)
+	 */
+	@Override
 	public void push( String s ) throws Exception
 	{
 		if( stackPtr-- < 1 )
@@ -32,6 +36,10 @@ public class Stack {
 		System.out.print( String.format( "Pushed %s. Size is now %d\n", s, this.getSize() ) );
 	}
 	
+	/* (non-Javadoc)
+	 * @see cx.ath.nb12.stack.Stack#pop()
+	 */
+	@Override
 	public String pop() throws Exception
 	{
 		if( stackPtr >= buf.length )
@@ -44,6 +52,10 @@ public class Stack {
 		return retVal;
 	}
 	
+	/* (non-Javadoc)
+	 * @see cx.ath.nb12.stack.Stack#getSize()
+	 */
+	@Override
 	public int getSize() 
 	{
 		return buf.length - stackPtr;

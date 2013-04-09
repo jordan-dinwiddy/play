@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.stack;
 
 public class GenericStack<T> {
 	private Node listHead;

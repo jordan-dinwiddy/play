@@ -1,10 +1,10 @@
-package cx.ath.nb12;
+package cx.ath.nb12.stack;
 
 public class StackDriver {
 
 	public static void main( String[] args )
 	{
-		Stack s1 = new Stack( 16 );
+		Stack s1 = new StackBasicFixedArrayImpl( 16 );
 		
 		try {
 			s1.push( "Hello" );

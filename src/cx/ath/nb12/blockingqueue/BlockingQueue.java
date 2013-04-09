@@ -1,9 +1,9 @@
-package cx.ath.nb12;
+package cx.ath.nb12.blockingqueue;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockingQueue<T> implements MyQueue<T> {
+public class BlockingQueue<T> implements CustomQueue<T> {
 
 
 	private List<T> items = new ArrayList<T>();
