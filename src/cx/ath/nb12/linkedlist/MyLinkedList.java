@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.linkedlist;
 
 public class MyLinkedList {
 
