@@ -9,8 +9,18 @@ public class Driver {
 		d.doMinValueExample();
 		d.doTraverseExample();
 		d.doPreOrderExample();
+		d.doPrintExample();
 	}
 	
+	private void doPrintExample() {
+		
+		System.out.println("Print: ");
+		Node root = BSTUtil.buildExampleBST();
+		
+		BSTUtil.printTreeSingleQueue(root);
+		BSTUtil.printTreeSingleQueue(root);
+	}
+
 	private void doPreOrderExample()
 	{
 		Node root = BSTUtil.buildExampleBST();
@@ -24,6 +34,7 @@ public class Driver {
 		System.out.println();
 		
 	}
+	
 	private void doTraverseExample()
 	{
 		Node root = BSTUtil.buildExampleBST();
@@ -41,6 +52,7 @@ public class Driver {
 		System.out.println();
 		
 	}
+	
 	private void doBstLookupExample()
 	{
 		Node root = BSTUtil.buildExampleBST();
@@ -69,5 +81,4 @@ public class Driver {
 		
 		System.out.printf( "Looking up %d in tree at %s: %s\n", val, root, result );
 	}
-	
 }
