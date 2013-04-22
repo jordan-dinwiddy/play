@@ -1,0 +1,109 @@
+<html>
+<head>
+	<title>Javascript/Jquery Tiles Demo</title>
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script>
+
+	$(document).ready(function() {
+
+		var d = 0;
+		$('.thumb').each(function () {
+			$(this).delay(d).fadeIn(600);
+    		//$(this).css('display', 'inline-block');
+    		d += 30;
+    	});
+	});
+	</script>
+
+	<style>
+	<!-- see http://jsfiddle.net/jdinwiddy/mBqne/1/ -->
+
+	#outercorners img {
+		display:none;
+	}
+	.thumb {
+		/*background-color: #C2D6D6; */
+		/* Green */
+		background-color: #ffffff;
+		width: 120px;
+		height: 120px;
+		/* border: #889696 3px solid; */
+		border: 1px solid #e5e5e5;
+		display:none;
+		float: left;
+		margin: 5px;
+		padding: 5px;
+		font-size: 14px;
+		border-radius: 4px;
+		text-decoration: underline;
+	}
+	.thumb:hover {
+		/* border: 3px solid #e5e5e5;
+		padding: 3px; */
+		width: 120px;
+		height: 120px;
+		background-color: #EEEEEE;
+		cursor: pointer;
+		color: #000000;
+	}
+	body {
+		font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		color: #C5C5C5;
+		background-color: #f5f5f5;
+	}
+
+	h1 {
+		color: #000000;
+	}
+	</style>
+</head>
+<body>
+	<h1>Titles below...</h1>
+
+	<div id="outercorners">
+		<div class="thumb">1</div>
+		<div class="thumb">2</div>
+		<div class="thumb">3</div>
+		<div class="thumb">4</div>
+		<div class="thumb">5</div>
+		<div class="thumb">6</div>
+		<div class="thumb">7</div>
+		<div class="thumb">8</div>
+		<div class="thumb">9</div>
+		<div class="thumb">10</div>
+		<div class="thumb">11</div>
+		<div class="thumb">12</div>
+		<div class="thumb">13</div>
+		<div class="thumb">14</div>
+		<div class="thumb">15</div>
+		<div class="thumb">16</div>
+		<div class="thumb">17</div>
+		<div class="thumb">18</div>
+		<div class="thumb">19</div>
+		<div class="thumb">20</div>
+		<div class="thumb">21</div>
+		<div class="thumb">22</div>
+		<div class="thumb">23</div>
+		<div class="thumb">24</div>
+		<div class="thumb">25</div>
+		<div class="thumb">26</div>
+		<div class="thumb">27</div>
+		<div class="thumb">28</div>
+		<div class="thumb">29</div>
+		<div class="thumb">30</div>
+		<div class="thumb">31</div>
+		<div class="thumb">32</div>
+		<div class="thumb">33</div>
+		<div class="thumb">34</div>
+		<div class="thumb">35</div>
+		<div class="thumb">36</div>
+		<div class="thumb">37</div>
+		<div class="thumb">38</div>
+		<div class="thumb">39</div>
+		<div class="thumb">40</div>
+		<div class="thumb">41</div>
+	</div>
+
+</body>
+</html>
