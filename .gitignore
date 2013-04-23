@@ -17,3 +17,5 @@
 #Compile target
 target/
 bin/
+
+.DS_Store
