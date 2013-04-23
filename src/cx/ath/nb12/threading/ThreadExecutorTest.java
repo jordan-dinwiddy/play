@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.threading;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

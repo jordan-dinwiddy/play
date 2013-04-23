@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.hex;
 
 /**
  * Implements with the if-else

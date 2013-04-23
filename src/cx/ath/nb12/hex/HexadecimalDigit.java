@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.hex;
 
 public interface HexadecimalDigit {
 

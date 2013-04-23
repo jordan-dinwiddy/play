@@ -1,4 +1,4 @@
-package cx.ath.nb12;
+package cx.ath.nb12.threading;
 
 public class BusyWait {
 
