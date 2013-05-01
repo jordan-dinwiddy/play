@@ -1,10 +1,22 @@
 package cx.ath.nb12.pattern;
 
+/**
+ * A grid of elements.
+ * 
+ *  -------------------
+ *  | 0,0 | 0,1 | 0,2 |
+ *  -------------------
+ *  | 1,0 | 1,1 | 1,2 |
+ *  -------------------
+ *  | 2,0 | 2,1 | 2,2 |
+ *  -------------------
+ *  
+ */
 public class Grid {
 
-	private int width;
-	private int height;
-	private BasicElement[][] gridContents;
+	private final int width;
+	private final int height;
+	private final BasicElement[][] gridContents;
 
 	public Grid(int width, int height) {
 
